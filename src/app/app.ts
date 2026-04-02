@@ -31,8 +31,6 @@ export class App implements OnInit {
       this.items = res.jewelleryItems || [];
       this.metalItems = res.metalItems || [];
       this.taxes = res.taxes || [];
-      this.applyFilter();
-      console.log("got new data");
     });
   }
 
