@@ -22,6 +22,8 @@ export class JewelleryService {
   }
 
   deleteItem(id: number) {
-    return this.http.delete(`${this.baseUrl}/deleteItem/${id}`);
+    return this.http.delete(`${this.baseUrl}/deleteItem/${id}`, {
+      responseType: 'text'
+    });
   }
 }

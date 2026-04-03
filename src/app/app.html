@@ -15,6 +15,8 @@
       <p class="font-serif">Sort by:</p>
       <select (change)="sortItems($event)" class="border p-2">
         <option value="">Sort</option>
+        <option value="nameAsc">Name A → Z</option>
+        <option value="nameDesc">Name Z → A</option>
         <option value="priceAsc">Price Low → High</option>
         <option value="priceDesc">Price High → Low</option>
       </select>

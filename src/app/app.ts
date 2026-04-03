@@ -31,6 +31,7 @@ export class App implements OnInit {
       this.items = res.jewelleryItems || [];
       this.metalItems = res.metalItems || [];
       this.taxes = res.taxes || [];
+      this.applyFilter();
     });
   }
 
@@ -39,7 +40,7 @@ export class App implements OnInit {
   }
 
   saveItem() {
-    if (!this.form.name || !this.form.metalType || !this.form.quantity) {
+    if (!this.form.name || !this.form.metalType || !this.form.quantity || !this.form.availability || !this.form.taxId) {
       alert('Please fill all required fields');
       return;
     }
@@ -136,7 +137,11 @@ export class App implements OnInit {
 
   sortItems(event: any) {
     const value = event.target.value;
-    if (value === 'priceAsc') {
+  if (value === 'nameAsc') {
+      this.filteredItems.sort((a, b) => a.name.localeCompare(b.name));
+    } else if (value === 'nameDesc') {
+      this.filteredItems.sort((a, b) => b.name.localeCompare(a.name));
+    } else if (value === 'priceAsc') {
       this.filteredItems.sort((a, b) => a.finalPrice - b.finalPrice);
     } else if (value === 'priceDesc') {
       this.filteredItems.sort((a, b) => b.finalPrice - a.finalPrice);
