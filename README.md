@@ -20,7 +20,7 @@ This project was generated using [Angular CLI](https://github.com/angular/angula
 src/
 ├── app/
 │   ├── app.ts               # Main component — logic for CRUD, filter, sort, price calculation
-│   ├── app.html             # Template — grid, modal, snackbar
+│   ├── app.html             # Template — grid, modal
 │   └── services/
 │       └── jewelleryService.ts   # HTTP service for all API calls
 ```
