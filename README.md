@@ -32,8 +32,6 @@ src/
 ### Prerequisites
 - Node.js & npm
 - Angular CLI
-- Java 17+
-- Maven
 
 ## Development server
 
